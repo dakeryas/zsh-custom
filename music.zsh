@@ -6,7 +6,6 @@ function guess_tags(){
     TAGS[-d]=$(metaflac --show-tag DATE $sample | awk -F= '{print $2}')
     TAGS[-p]=$(metaflac --show-tag ARTIST $sample | awk -F= '{print $2}')
     TAGS[-t]=$(metaflac --show-tag ALBUM $sample | awk -F= '{print $2}')
-    echo ${(kv)TAGS}
 }
 
 function print_cuesheet(){
