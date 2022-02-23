@@ -8,9 +8,9 @@ alias root='root -l'
 alias ipython3='ipython3 --pylab'
 alias sort='LC_ALL=C sort'
 alias mpv='mpv --loop-playlist'
-alias par="parallel"
+alias par="parallel -k --verbose"
 
-function submitMIT(){
+function subMIT(){
 	local remote=submit.mit.edu
 	if klist | grep -q "Valid";then
 		ssh $remote
